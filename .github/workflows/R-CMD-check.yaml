@@ -47,5 +47,8 @@ jobs:
 
       - uses: r-lib/actions/check-r-package@v2
 
+      - name: Install package
+        run: R CMD INSTALL .
+
       - name: Check drivers
         run: Rscript inst/etc/checks.R
